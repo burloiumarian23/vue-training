@@ -1,0 +1,14 @@
+html {
+  font-family: Arial, Verdana, sans serif;
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+}
+
+body {
+  background-color: lightblue;
+}
