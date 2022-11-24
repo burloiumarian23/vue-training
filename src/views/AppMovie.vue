@@ -1,14 +1,16 @@
 <template>
-  <header>{{ title }}</header>
+  <div>
+    {{ movieId }}
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'MainHeader',
+  name: 'AppMovie',
   props: {
-    title: {
+    movieId: {
       type: String,
-      default: 'Default title',
+      default: '',
     },
   },
 }

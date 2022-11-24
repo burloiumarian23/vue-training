@@ -4,8 +4,8 @@
       {{ label }}
     </label>
     <input
-      :type="type"
       :id="id"
+      :type="type"
       :value="value"
       :name="name"
       v-bind="$attrs"
@@ -16,29 +16,29 @@
 
 <script>
 export default {
-  name: "BasicInput",
+  name: 'BasicInput',
   inheritAttrs: false,
   props: {
     id: {
       type: String,
-      default: () => 'a' + String(Math.random()).slice(2)
+      default: () => 'a' + String(Math.random()).slice(2),
     },
     name: {
       type: String,
-      default: undefined
+      default: undefined,
     },
     type: {
       type: String,
-      default: 'text'
+      default: 'text',
     },
     value: {
       type: [String, Number],
-      required: true
+      required: true,
     },
     label: {
       type: String,
-      required: true
-    }
+      required: true,
+    },
   },
 }
 </script>

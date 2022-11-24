@@ -14,7 +14,7 @@ export default {
     message () {
       return this.$store.state.message.message
     },
-  }
+  },
 }
 </script>
 

@@ -3,9 +3,9 @@
     <BasicInput
       id="username"
       v-model="username"
+      label="Username:"
       name="username"
       placeholder="tony.stark"
-      label="Username:"
     />
 
     <BasicInput
@@ -43,8 +43,12 @@ export default {
     submitForm () {
       this.$store.dispatch('logIn', {
         username: this.username,
-        password: this.password
+        password: this.password,
       })
+        .then(() => {
+          // Will be called if no error
+          this.$router.push({ name: 'movies' })
+        })
     },
   },
 }

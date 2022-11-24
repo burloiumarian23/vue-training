@@ -13,6 +13,6 @@ export default {
     showMessage ({ commit }, { message, type }) {
       commit('setMessage', { message, type })
       setTimeout(() => commit('setMessage', { message: undefined, type: 'info' }), 3000)
-    }
-  }
+    },
+  },
 }

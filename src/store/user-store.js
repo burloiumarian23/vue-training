@@ -15,16 +15,17 @@ export default {
   },
   actions: {
     logIn ({ commit, dispatch }, { username, password }) {
-      login(username, password)
+      return login(username, password)
         .then(({ token }) => {
           if (!token) {
-            dispatch('showMessage', {message: 'Invalid credentials', type: 'error'})
-            return
+            dispatch('showMessage', { message: 'Invalid credentials', type: 'error' })
+            throw new Error('Invalid credentials')
           }
           // const token = data.token
           // const { token } = data
           localStorage.setItem('token', token)
+          commit('setConnected', true)
         })
-    }
+    },
   },
 }
